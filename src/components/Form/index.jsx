@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Sheet from "../Sheet"
+
 
 const Form = () => {
 
@@ -37,10 +39,15 @@ const Form = () => {
             console.error('Error' + error)
         }
 
+        
+
+
+
     }
 
     return(
-        <form onSubmit={handleSubmit} className="bg-gray-600 flex flex-col p-6 m-3.5 gap-2 rounded shadow-md md:w-2/4 lg:w-1/4">
+        <div className="flex h-full">
+        <form onSubmit={handleSubmit} className="bg-gray-600 flex flex-col p-6 m-3.5 gap-2 rounded shadow-md md:w-2/4 lg:w-1/4 h-3/4">
             <label className="text-xl text-white" htmlFor="nomeMercadoria">Nome da Mercadoria</label>
             <input className="border border-gray-300 p-1 rounded-md text-gray-700 placeholder-gray-500" type="text" id="nomeMercadoria" required placeholder="Ex: Tecido Branco" name="nomeMercadoria" minLength="3" maxLength="120" pattern="^[A-Za-z\s]+$" onChange={(e) => setNome(e.target.value)}/>
             
@@ -64,6 +71,8 @@ const Form = () => {
             
             <button type="submit" className="bg-blue-500 text-white py-2 px-4 mt-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Confirmar</button>
         </form>
+        <Sheet/>
+        </div>
     )
 }
 
