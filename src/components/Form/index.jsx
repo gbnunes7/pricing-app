@@ -10,9 +10,33 @@ const Form = () => {
     const [comissaoVendedor, setComissaoVendedor] = useState(0)
     const [lucro, setLucro] = useState(0)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(nome,custoMercadoria,custoFixo,vendasMensais,simplesNacional,comissaoVendedor,lucro)
+        const formData = {
+					name: nome,
+					custo: custoMercadoria,
+					custoFixo: custoFixo,
+					vendasMensais: vendasMensais,
+					simplesNacional: simplesNacional,
+					comissao: comissaoVendedor,
+					lucro: lucro,
+				};
+        
+        try {
+            const response = await fetch('http://localhost:3001/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+
+             const data = await response.json()
+             console.log('Sucess' + data)
+        } catch (error) {
+            console.error('Error' + error)
+        }
+
     }
 
     return(
