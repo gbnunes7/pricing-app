@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": "a6ed",
+      "name": "Tecido Branco",
+      "custo": "2.99",
+      "custoFixo": "2.99",
+      "vendasMensais": "15.000",
+      "simplesNacional": "12",
+      "comissao": "5",
+      "lucro": "2"
+    },
+    {
+      "id": "f2b6",
+      "name": "Tecido Branco",
+      "custo": "2.99",
+      "custoFixo": "2.99",
+      "vendasMensais": "15.000",
+      "simplesNacional": "12",
+      "comissao": "5",
+      "lucro": "2"
+    },
+    {
+      "id": "2860",
+      "name": "Tecido Branco",
+      "custo": "2.99",
+      "custoFixo": "2.99",
+      "vendasMensais": "15.000",
+      "simplesNacional": "12",
+      "comissao": "5",
+      "lucro": "2"
+    },
+    {
+      "id": "b1f3",
+      "name": "Tecido Branco",
+      "custo": "2.99",
+      "custoFixo": "2.99",
+      "vendasMensais": "15.000",
+      "simplesNacional": "12",
+      "comissao": "5",
+      "lucro": "2"
+    },
+    {
+      "id": "e258",
+      "name": "Tecido Branco",
+      "custo": "2.99",
+      "custoFixo": "2.99",
+      "vendasMensais": "15.000",
+      "simplesNacional": "3",
+      "comissao": "5",
+      "lucro": "8"
+    },
+    {
+      "id": "32dd",
+      "name": "Tecido Branco",
+      "custo": "2.99",
+      "custoFixo": "2.99",
+      "vendasMensais": "15.000",
+      "simplesNacional": "3",
+      "comissao": "5",
+      "lucro": "8"
+    }
+  ]
+}
