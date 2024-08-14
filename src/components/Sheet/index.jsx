@@ -1,14 +1,5 @@
-import { useEffect, useState } from "react";
-const Sheet = () => {
-	const [produtos, setProdutos] = useState([]);
-
-	useEffect(() => {
-		fetch("http://localhost:3001/users")
-			.then((resultado) => resultado.json())
-			.then((dados) => {
-				setProdutos(dados);
-			});
-	}, []);
+const Sheet = ({produtos}) => {
+	
 
 	return (
 		<table className="w-3/4 h-full bg-white border border-gray-200">
@@ -28,15 +19,15 @@ const Sheet = () => {
 				</tr>
 			</thead>
 			<tbody>
-				{produtos.map((item) => (
-					<tr key={item.id} className="border-b border-gray-200">
-						<td className="py-2 px-1">{item.name}</td>
-						<td className="py-2 px-1">{item.custo}</td>
-						<td className="py-2 px-1">{item.custoFixo}</td>
-						<td className="py-2 px-1">{item.vendasMensais}</td>
-						<td className="py-2 px-1">{item.simplesNacional}</td>
-						<td className="py-2 px-1">{item.comissao}</td>
-						<td className="py-2 px-1">{item.lucro}</td>
+				{produtos.map((produto) => (
+					<tr key={produto.id} className="border-b border-gray-200">
+						<td className="py-2 px-1">{produto.name}</td>
+						<td className="py-2 px-1">{produto.custo}</td>
+						<td className="py-2 px-1">{produto.custoFixo}</td>
+						<td className="py-2 px-1">{produto.vendasMensais}</td>
+						<td className="py-2 px-1">{produto.simplesNacional}</td>
+						<td className="py-2 px-1">{produto.comissao}</td>
+						<td className="py-2 px-1">{produto.lucro}</td>
 					</tr>
 				))}
 			</tbody>
